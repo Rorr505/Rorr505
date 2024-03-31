@@ -7,7 +7,6 @@ from string import ascii_uppercase, digits
 from re import A, search
 from requests import post, Session, get
 from concurrent.futures import ThreadPoolExecutor
-from pystyle import Colors, Colorate
 
 os .system ("cls & title SMSCALLBY:BFHMSC")
 
